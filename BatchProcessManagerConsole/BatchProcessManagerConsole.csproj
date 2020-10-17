@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{094D4616-92B2-4841-ACEF-476D136B2A6E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BatchProcessManagerConsole</RootNamespace>
+    <AssemblyName>BatchProcessManagerConsole</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.6.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.Entity, Version=6.6.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdviceAlertProcess\AdviceAlertProcess.csproj">
+      <Project>{8f9a8452-1b02-4e0a-957f-ef707411b08c}</Project>
+      <Name>AdviceAlertProcess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Batch\Batch.csproj">
+      <Project>{02431688-048d-402e-aa70-5c987814cb09}</Project>
+      <Name>Batch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BitCoinPriceFetcherProcess\BitCoinPriceFetcherProcess.csproj">
+      <Project>{89b128ef-d876-48d9-a630-5bb750777b42}</Project>
+      <Name>BitCoinPriceFetcherProcess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BitCoinPriceFetcher\Business.csproj">
+      <Project>{809213cb-cbc0-4311-bc02-6b1a43dd5f13}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BucketizerProcess\BucketizerProcess.csproj">
+      <Project>{e7ef64a0-a7a6-4425-ab80-af3638643023}</Project>
+      <Name>BucketizerProcess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CSIAlgorithms\CCIAlgorithms.csproj">
+      <Project>{6b8be1cb-9537-464b-8280-54119c1bde82}</Project>
+      <Name>CCIAlgorithms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DPOAlgorithms\DPOAlgorithms.csproj">
+      <Project>{bfb99836-fa90-4b09-8b92-0a013c208940}</Project>
+      <Name>DPOAlgorithms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MomentumAlgorithms\MomentumAlgorithms.csproj">
+      <Project>{e7ead7e4-675d-4c8d-bffb-124d2b87ff4b}</Project>
+      <Name>MomentumAlgorithms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MSIAlgorithms\MFIAlgorithms.csproj">
+      <Project>{bff98e58-939d-4726-8225-8bb0bf692b78}</Project>
+      <Name>MFIAlgorithms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ROCAlgorithms\ROCAlgorithms.csproj">
+      <Project>{a50da743-2a18-4f77-92ff-482c4a63e130}</Project>
+      <Name>ROCAlgorithms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StochRSI\StochRSIAlgorithms.csproj">
+      <Project>{b7862a3f-27f6-4c25-99c5-a08e2ce61737}</Project>
+      <Name>StochRSIAlgorithms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradeBucketCache\TradeBucketCache.csproj">
+      <Project>{3eb7b102-7641-48a7-805f-a693b7278141}</Project>
+      <Name>TradeBucketCache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradeCommandProcess\TradeCommandProcess.csproj">
+      <Project>{27ddf869-1515-4f5c-8933-ac906d140bdc}</Project>
+      <Name>TradeCommandProcess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradingAlgorithmBase\TradingAlgorithmBase.csproj">
+      <Project>{fc69c1a0-29c1-417b-83b0-d5deaece0830}</Project>
+      <Name>TradingAlgorithmBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WilliamsRAlgorithms\WilliamsRAlgorithms.csproj">
+      <Project>{661ea63f-f32f-462e-9ad7-8bdc9f57a161}</Project>
+      <Name>WilliamsRAlgorithms</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

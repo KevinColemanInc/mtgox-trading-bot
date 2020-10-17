@@ -1,0 +1,12 @@
+﻿.show-grid [class*="span"] {
+  background-color: #eee;
+  text-align: center;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  min-height: 40px;
+  line-height: 40px;
+}
+.show-grid:hover [class*="span"] {
+  background: #bbb;
+}
